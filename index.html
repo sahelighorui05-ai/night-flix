@@ -3,55 +3,211 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Night Flix</title>
+<title>🌙 Night Flix</title>
+
 <style>
-*{box-sizing:border-box}
-body{margin:0;background:#090909;color:white;font-family:Arial,sans-serif}
-header{background:#171717;padding:20px;text-align:center;border-bottom:2px solid #e50914}
-header h1{margin:0;color:#ff1744;font-size:30px}
-header p{color:#aaa}
-.search{padding:15px;text-align:center}
-input{width:95%;max-width:500px;padding:13px;border-radius:8px;border:1px solid #444;background:#222;color:white}
-h2{padding:0 15px}
-.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;padding:12px}
-.card{background:#1b1b1b;border-radius:10px;overflow:hidden;color:white;text-decoration:none}
-.thumb{height:125px;background:linear-gradient(135deg,#272727,#64152a);display:flex;align-items:center;justify-content:center;font-size:35px;position:relative}
-.play{position:absolute;background:#e50914;border-radius:50%;padding:10px;font-size:17px}
-.card p{padding:0 10px;font-size:14px}
-footer{text-align:center;padding:25px;color:#888}
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #090909;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background: #171717;
+  padding: 25px 10px;
+  text-align: center;
+  border-bottom: 3px solid #e50914;
+}
+
+header h1 {
+  margin: 0;
+  color: #ff1744;
+  font-size: 32px;
+}
+
+header p {
+  color: #bbb;
+}
+
+.search {
+  padding: 20px;
+  text-align: center;
+}
+
+input {
+  width: 95%;
+  max-width: 600px;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #444;
+  background: #222;
+  color: white;
+  font-size: 16px;
+}
+
+h2 {
+  padding: 0 20px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 15px;
+  padding: 20px;
+}
+
+.card {
+  background: #1b1b1b;
+  border-radius: 12px;
+  overflow: hidden;
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.thumb {
+  height: 125px;
+  background: linear-gradient(135deg, #292929, #68152d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.play {
+  position: absolute;
+  background: #e50914;
+  border-radius: 50%;
+  width: 58px;
+  height: 58px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+}
+
+.card p {
+  padding: 12px;
+  margin: 0;
+  font-size: 14px;
+}
+
+.card:active {
+  opacity: 0.8;
+}
+
+footer {
+  text-align: center;
+  padding: 25px;
+  color: #888;
+}
+
+@media (min-width: 700px) {
+  .grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
+  .thumb {
+    height: 180px;
+  }
+}
 </style>
 </head>
+
 <body>
+
 <header>
-<h1>🌙 NIGHT FLIX</h1>
-<p>Discover Something New</p>
+  <h1>🌙 NIGHT FLIX</h1>
+  <p>Discover Something New</p>
 </header>
+
 <div class="search">
-<input id="search" placeholder="Search thumbnails..." oninput="filterCards()">
+  <input
+    type="search"
+    id="searchBox"
+    placeholder="Search thumbnails..."
+    oninput="searchCards()">
 </div>
+
 <h2>🔥 Featured</h2>
-<div class="grid" id="grid"></div>
-<footer>Night Flix © 2026</footer>
+
+<div class="grid" id="thumbnailGrid">
+
+  <a class="card" href="https://www.profitableratecpmnetwork.com/mywgmcgj?key=2e1a095eb1464c8cfe0633b977a0ea30" target="_blank" rel="noopener noreferrer">
+    <div class="thumb">
+      <div class="play">▶</div>
+    </div>
+    <p>Featured Collection</p>
+  </a>
+
+  <a class="card" href="https://www.profitableratecpmnetwork.com/mywgmcgj?key=2e1a095eb1464c8cfe0633b977a0ea30" target="_blank" rel="noopener noreferrer">
+    <div class="thumb">
+      <div class="play">▶</div>
+    </div>
+    <p>Trending Now</p>
+  </a>
+
+  <a class="card" href="https://www.profitableratecpmnetwork.com/mywgmcgj?key=2e1a095eb1464c8cfe0633b977a0ea30" target="_blank" rel="noopener noreferrer">
+    <div class="thumb">
+      <div class="play">▶</div>
+    </div>
+    <p>Popular Videos</p>
+  </a>
+
+  <a class="card" href="https://www.profitableratecpmnetwork.com/mywgmcgj?key=2e1a095eb1464c8cfe0633b977a0ea30" target="_blank" rel="noopener noreferrer">
+    <div class="thumb">
+      <div class="play">▶</div>
+    </div>
+    <p>New Arrivals</p>
+  </a>
+
+  <a class="card" href="https://www.profitableratecpmnetwork.com/mywgmcgj?key=2e1a095eb1464c8cfe0633b977a0ea30" target="_blank" rel="noopener noreferrer">
+    <div class="thumb">
+      <div class="play">▶</div>
+    </div>
+    <p>Editor's Picks</p>
+  </a>
+
+  <a class="card" href="https://www.profitableratecpmnetwork.com/mywgmcgj?key=2e1a095eb1464c8cfe0633b977a0ea30" target="_blank" rel="noopener noreferrer">
+    <div class="thumb">
+      <div class="play">▶</div>
+    </div>
+    <p>Discover More</p>
+  </a>
+
+</div>
+
+<footer>
+  © 2026 Night Flix
+</footer>
+
 <script>
-const adLink="https://www.profitableratecpmnetwork.com/mywgmcgj?key=2e1a095eb1464c8cfe0633b977a0ea30";
-const items=[
-"Featured Collection","Trending Now","Popular Videos",
-"New Arrivals","Editor's Picks","Discover More"
-];
-const grid=document.getElementById("grid");
-items.forEach((title,i)=>{
-grid.innerHTML+=`
-<a class="card" href="${adLink}" target="_blank" rel="noopener noreferrer">
-<div class="thumb">🎬<span class="play">▶</span></div>
-<p>${title}</p>
-</a>`;
-});
-function filterCards(){
-const q=document.getElementById("search").value.toLowerCase();
-document.querySelectorAll(".card").forEach(card=>{
-card.style.display=card.innerText.toLowerCase().includes(q)?"block":"none";
-});
+function searchCards() {
+  const query = document.getElementById("searchBox")
+    .value.toLowerCase();
+
+  document.querySelectorAll(".card").forEach(card => {
+    const title = card.querySelector("p")
+      .textContent.toLowerCase();
+
+    card.style.display = title.includes(query)
+      ? ""
+      : "none";
+  });
 }
 </script>
+
 </body>
 </html>
